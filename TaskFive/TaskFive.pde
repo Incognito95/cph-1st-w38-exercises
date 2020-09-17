@@ -14,15 +14,22 @@ class Student {
   }
 }
 
-// 5b
-void studentParameters (String students[]) {
-  System.out.println(students[2]);
+//5b
+String Kappa(int x, Student[] students){
+  for (int i = 0; i < students.length; i++) {
+    if (x == i) {
+      return students[i].Name;
+    }
+  }
+  return "ERROR";
 }
 
-
-// 5c
-void StudentLoopArray (String students[]) {
-  for (int i = 0; i < 0; i++) {
-    System.out.println(students[2]);
+//5c
+int Kappa2(String x, Student[] students) {
+  for (int i = 0; i < students.length; i++) {
+    if (x == students[i].Name) {
+      return i;
+    }
   }
+  return -1;
 }
